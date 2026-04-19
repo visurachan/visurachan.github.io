@@ -116,11 +116,37 @@ footer .fn{color:var(--gdim)}
 
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:none}
+
+/* ── MOBILE ── */
+@media(max-width:640px){
+  .wrap{padding:0 1.25rem}
+  .logo span{display:none}
+  .nl{gap:1.25rem}
+  section{padding:3.5rem 0}
+  .eco-wrap{padding:1.25rem}
+  .eco-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .kafka-band{flex-direction:column;gap:.75rem;text-align:center}
+  .kb-right{text-align:center}
+  .kb-center{width:100%;padding:0}
+  .kf-wire{width:80px}
+  .htag{font-size:10px}
+}
+
+/* ── REDUCED MOTION ── */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
+  .hc>*{opacity:1;transform:none;animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+}
 </style>
 </head>
 <body>
 
-<nav>
+<a href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;focus:static" class="skip-link">Skip to main content</a>
+<style>.skip-link:focus{position:fixed;top:8px;left:8px;width:auto;height:auto;padding:8px 16px;background:var(--green);color:#080c10;font-weight:700;font-size:12px;border-radius:4px;z-index:999;overflow:visible}</style>
+
+<nav aria-label="Main navigation">
   <div class="ni">
     <a class="logo" href="#hero">VC <span>// backend engineer</span></a>
     <ul class="nl">
@@ -129,6 +155,8 @@ footer .fn{color:var(--gdim)}
     </ul>
   </div>
 </nav>
+
+<main id="main-content">
 
 <!-- HERO -->
 <section class="hero" id="hero">
@@ -142,8 +170,8 @@ footer .fn{color:var(--gdim)}
       </p>
       <div class="cta">
         <a href="#projects" class="btn btn-p">View Projects</a>
-        <a href="https://github.com/visurachan" class="btn btn-g" target="_blank">GitHub ↗</a>
-        <a href="https://linkedin.com/in/visurachandula" class="btn btn-g" target="_blank">LinkedIn ↗</a>
+        <a href="https://github.com/visurachan" class="btn btn-g" target="_blank" aria-label="GitHub profile (opens in new tab)">GitHub ↗</a>
+        <a href="https://linkedin.com/in/visurachandula" class="btn btn-g" target="_blank" aria-label="LinkedIn profile (opens in new tab)">LinkedIn ↗</a>
       </div>
     </div>
   </div>
@@ -297,24 +325,26 @@ footer .fn{color:var(--gdim)}
       Open to junior backend roles. Reach out via any of the channels below.
     </p>
     <div class="contact-grid reveal">
-      <a class="cc" href="mailto:visurachandula@gmail.com">
-        <span class="ci">✉</span>
+      <a class="cc" href="mailto:visurachandula@gmail.com" aria-label="Send email to visurachandula@gmail.com">
+        <span class="ci" aria-hidden="true">✉</span>
         <div class="ct">Email</div>
         <div class="cs">visurachandula@gmail.com</div>
       </a>
-      <a class="cc" href="https://github.com/visurachan" target="_blank">
-        <span class="ci" style="font-family:monospace;font-size:15px">{ }</span>
+      <a class="cc" href="https://github.com/visurachan" target="_blank" aria-label="GitHub profile (opens in new tab)">
+        <span class="ci" aria-hidden="true" style="font-family:monospace;font-size:15px">{ }</span>
         <div class="ct">GitHub</div>
         <div class="cs">github.com/visurachan</div>
       </a>
-      <a class="cc" href="https://www.linkedin.com/in/visurachandula" target="_blank">
-        <span class="ci" style="font-size:14px;font-weight:700">in</span>
+      <a class="cc" href="https://www.linkedin.com/in/visurachandula" target="_blank" aria-label="LinkedIn profile (opens in new tab)">
+        <span class="ci" aria-hidden="true" style="font-size:14px;font-weight:700">in</span>
         <div class="ct">LinkedIn</div>
         <div class="cs">linkedin.com/in/visurachandula</div>
       </a>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap">
