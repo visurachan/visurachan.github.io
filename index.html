@@ -12,7 +12,7 @@
   --border:rgba(0,255,140,0.12);--border-h:rgba(0,255,140,0.35);
   --green:#00ff8c;--gdim:rgba(0,255,140,0.6);--gfaint:rgba(0,255,140,0.07);
   --text:#e2e8f0;--muted:#64748b;--dim:#94a3b8;
-  --amber:#f59e0b;--blue:#38bdf8;--red:#f87171;
+  --amber:#f59e0b;--blue:#38bdf8;--red:#f87171;--teal:#2dd4bf;
   --mono:'JetBrains Mono',monospace;--sans:'Syne',sans-serif;
 }
 html{scroll-behavior:smooth}
@@ -35,17 +35,14 @@ nav .ni{max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;align-items:c
 .hc>*:nth-child(3){animation-delay:.4s}
 .hc>*:nth-child(4){animation-delay:.55s}
 @keyframes fu{to{opacity:1;transform:none}}
-
 .htag{display:inline-flex;align-items:center;gap:8px;background:var(--gfaint);border:1px solid var(--border);border-radius:4px;padding:6px 14px;font-size:11px;color:var(--gdim);letter-spacing:.12em;margin-bottom:2rem}
 .htag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-
 h1{font-family:var(--sans);font-size:clamp(42px,7vw,78px);font-weight:800;line-height:1.0;letter-spacing:-2px;margin-bottom:.6rem}
 h1 .acc{color:var(--green)}
 .role-line{display:inline-block;font-size:13px;color:var(--green);letter-spacing:.06em;margin-bottom:1.4rem;font-family:var(--sans);font-weight:700;background:rgba(0,255,140,0.07);border:1px solid rgba(0,255,140,0.25);border-radius:4px;padding:5px 14px}
 .hsub{font-size:14px;color:var(--dim);line-height:1.9;max-width:560px;margin-bottom:2rem}
 .hsub .hl{color:var(--gdim)}
-
 .cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.5rem}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;font-size:12px;font-family:var(--mono);text-decoration:none;border-radius:4px;transition:all .2s;cursor:pointer;border:none;letter-spacing:.03em}
 .btn-p{background:var(--green);color:#080c10;font-weight:700}
@@ -58,52 +55,75 @@ section{padding:5.5rem 0}
 .slabel::after{content:'';flex:0 0 36px;height:1px;background:var(--border-h)}
 .stitle{font-family:var(--sans);font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-1px;margin-bottom:1rem}
 
-/* ── STANDALONE PROJECT CARD ── */
-.proj-card{display:block;text-decoration:none;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1.75rem;transition:all .25s;margin-bottom:1.25rem}
-.proj-card:hover{border-color:var(--border-h);transform:translateY(-2px);background:rgba(0,255,140,0.03)}
-.ptag{font-size:10px;letter-spacing:.12em;color:var(--gdim);margin-bottom:.6rem}
-.proj-card h3{font-family:var(--sans);font-size:22px;font-weight:700;margin-bottom:.5rem}
-.proj-card p{font-size:12px;color:var(--muted);line-height:1.8}
-.pills{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:1.25rem}
+.pills{display:flex;flex-wrap:wrap;gap:5px}
 .pill{font-size:10px;padding:3px 8px;border-radius:3px;border:1px solid rgba(255,255,255,0.08);color:var(--dim);background:rgba(255,255,255,0.04);letter-spacing:.05em}
 .pill.g{border-color:rgba(0,255,140,0.22);color:var(--gdim);background:rgba(0,255,140,0.05)}
 .pill.b{border-color:rgba(56,189,248,0.22);color:var(--blue);background:rgba(56,189,248,0.05)}
 .pill.a{border-color:rgba(245,158,11,0.22);color:var(--amber);background:rgba(245,158,11,0.05)}
 .pill.r{border-color:rgba(248,113,113,0.22);color:var(--red);background:rgba(248,113,113,0.05)}
+.pill.t{border-color:rgba(45,212,191,0.22);color:var(--teal);background:rgba(45,212,191,0.05)}
+
+.proj-card{display:block;text-decoration:none;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1.75rem;transition:all .25s;margin-bottom:1.25rem}
+.proj-card:hover{border-color:var(--border-h);transform:translateY(-2px);background:rgba(0,255,140,0.03)}
+.ptag{font-size:10px;letter-spacing:.12em;color:var(--gdim);margin-bottom:.6rem}
+.proj-card h3{font-family:var(--sans);font-size:22px;font-weight:700;margin-bottom:.5rem}
+.proj-card p{font-size:12px;color:var(--muted);line-height:1.8}
 .clink{font-size:11px;color:var(--green);display:flex;align-items:center;gap:5px;letter-spacing:.05em;margin-top:1.25rem}
 .clink::after{content:'→'}
 
-/* ── ECOSYSTEM ── */
-.eco-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:2rem;margin-top:1.5rem;position:relative}
-.eco-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.75rem;flex-wrap:wrap;gap:.75rem}
-.eco-title{font-family:var(--sans);font-size:18px;font-weight:700;color:var(--text)}
-.eco-subtitle{font-size:11px;color:var(--muted);margin-top:4px}
+/* ecosystem */
+.eco-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:2rem;margin-top:1.5rem}
+.eco-title{font-family:var(--sans);font-size:18px;font-weight:700;color:var(--text);margin-bottom:4px}
+.eco-subtitle{font-size:11px;color:var(--muted);margin-bottom:1rem}
 
-/* Kafka band */
-.kafka-band{display:flex;align-items:center;gap:0;margin:0 0 1.75rem;background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.2);border-radius:6px;padding:14px 18px}
-.kb-left{flex:1;font-size:11px;color:var(--muted);line-height:1.7}
-.kb-left strong{color:var(--amber);font-weight:500}
-.kb-center{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 1rem}
-.kb-label{font-size:10px;color:var(--amber);letter-spacing:.12em;font-weight:700}
-.kf-wire{position:relative;width:100%;height:2px;background:rgba(245,158,11,0.15);border-radius:2px;overflow:hidden}
-.kf-signal{position:absolute;top:0;left:-40%;width:40%;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,var(--amber),rgba(255,220,100,0.9),transparent);box-shadow:0 0 6px rgba(245,158,11,0.6);animation:kf-travel 1.8s ease-in-out infinite}
-@keyframes kf-travel{0%{left:-40%}100%{left:100%}}
-.kb-right{flex:1;font-size:11px;color:var(--muted);line-height:1.7;text-align:right}
-.kb-right strong{color:var(--blue);font-weight:500}
+.hub-arch{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:1.5rem;margin-bottom:1.5rem}
+.arch-label{font-size:9px;letter-spacing:.12em;color:var(--gdim);margin-bottom:1.25rem;text-align:center}
 
-.eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.eco-card{display:block;text-decoration:none;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:1.25rem;transition:all .2s}
+/* customer + down wire — all centered */
+.entry{display:flex;flex-direction:column;align-items:center;margin-bottom:.25rem}
+.cust-chip{display:inline-flex;align-items:center;gap:7px;font-size:10px;color:var(--muted);letter-spacing:.08em;border:1px solid var(--border);border-radius:4px;padding:5px 12px;background:var(--bg2)}
+.cust-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;flex-shrink:0}
+.dw-line{width:1px;height:22px;background:rgba(0,255,140,0.15);position:relative;overflow:hidden;margin-top:3px}
+.dw-sig{position:absolute;top:-100%;left:0;width:1px;height:100%;background:linear-gradient(180deg,transparent,var(--green),transparent);animation:fall .9s ease-in-out infinite}
+@keyframes fall{0%{top:-100%}100%{top:110%}}
+.dw-arrow{font-size:10px;color:var(--gdim);line-height:1;margin-bottom:4px}
+
+/* hub row */
+.hub-row{display:flex;align-items:center;justify-content:center;gap:0}
+
+/* service tiles — no description, just tag, name, port */
+.svc-box{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:.9rem 1rem;text-align:center;transition:border-color .2s;flex:1;max-width:200px}
+.svc-box:hover{border-color:var(--border-h)}
+.svc-box.core{border-color:rgba(0,255,140,0.3);position:relative}
+.svc-box.core::before{content:'CORE';position:absolute;top:-8px;left:50%;transform:translateX(-50%);font-size:8px;letter-spacing:.14em;color:var(--green);background:var(--bg3);padding:0 6px;border:1px solid rgba(0,255,140,0.3);border-radius:2px}
+.sb-tag{font-size:8px;letter-spacing:.1em;color:var(--gdim);margin-bottom:5px}
+.sb-name{font-family:var(--sans);font-size:12px;font-weight:700;color:var(--text);margin-bottom:3px}
+.sb-port{font-size:9px;color:var(--muted)}
+
+/* horizontal connectors — equal size, aligned */
+.hconn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0 .75rem;flex-shrink:0;width:100px}
+.hc-label{font-size:8px;color:var(--muted);letter-spacing:.07em;white-space:nowrap;text-align:center}
+.hc-wire-wrap{display:flex;align-items:center;gap:4px;width:100%}
+.hc-wire{height:2px;flex:1;position:relative;border-radius:2px;overflow:hidden}
+.hc-wire-g{background:rgba(0,255,140,0.12)}
+.hc-wire-a{background:rgba(245,158,11,0.12)}
+.hc-sig{position:absolute;top:0;left:-50%;width:50%;height:2px;border-radius:2px;animation:hflow 1.6s ease-in-out infinite}
+.hc-sig-g{background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.hc-sig-a{background:linear-gradient(90deg,transparent,var(--amber),transparent)}
+@keyframes hflow{0%{left:-50%}100%{left:110%}}
+.hc-arrow{font-size:10px;flex-shrink:0}
+.hc-note{font-size:8px;color:var(--muted);white-space:nowrap;text-align:center}
+
+/* three cards */
+.eco-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.75rem}
+.eco-card{display:block;text-decoration:none;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:1rem;transition:all .2s}
 .eco-card:hover{border-color:var(--border-h);background:rgba(0,255,140,0.03)}
-.eco-card .etag{font-size:10px;letter-spacing:.1em;color:var(--gdim);margin-bottom:.5rem}
-.eco-card h4{font-family:var(--sans);font-size:17px;font-weight:700;margin-bottom:.4rem}
-.eco-card p{font-size:11px;color:var(--muted);line-height:1.7;margin-bottom:.9rem}
+.etag{font-size:9px;letter-spacing:.1em;color:var(--gdim);margin-bottom:4px}
+.eco-card h4{font-family:var(--sans);font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px}
+.eco-card p{font-size:10px;color:var(--muted);line-height:1.65;margin-bottom:.75rem}
+.ec-clink{font-size:10px;color:var(--green);letter-spacing:.05em}
+.ec-clink::after{content:' →'}
 
-/* highlights row */
-.eco-highlights{margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:1.5rem}
-.eco-h-item{font-size:11px;color:var(--muted)}
-.eco-h-item strong{color:var(--gdim)}
-
-/* CONTACT */
 .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
 .cc{display:block;text-decoration:none;background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:1.5rem;transition:all .2s}
 .cc:hover{border-color:var(--border-h);transform:translateY(-2px)}
@@ -118,22 +138,28 @@ footer .fn{color:var(--gdim)}
 .reveal.visible{opacity:1;transform:none}
 
 /* ── MOBILE ── */
-@media(max-width:640px){
+@media(max-width:680px){
   .wrap{padding:0 1.25rem}
   .logo span{display:none}
   .nl{gap:1.25rem}
   section{padding:3.5rem 0}
-  .eco-wrap{padding:1.25rem}
+
+  /* hub stacks vertically on mobile */
+  .hub-row{flex-direction:column;align-items:center;gap:.5rem}
+  .svc-box{max-width:100%;width:100%}
+
+  /* connectors become vertical on mobile */
+  .hconn{width:auto;flex-direction:row;padding:.25rem 0;gap:6px}
+  .hc-wire-wrap{width:auto;flex-direction:column;gap:2px}
+  .hc-wire{height:28px;width:2px;flex:none}
+  .hc-sig{top:-50%;left:0;width:2px;height:50%;animation:vflow 1.6s ease-in-out infinite}
+  @keyframes vflow{0%{top:-50%}100%{top:110%}}
+  .hc-arrow{transform:rotate(90deg)}
+
   .eco-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
-  .kafka-band{flex-direction:column;gap:.75rem;text-align:center}
-  .kb-right{text-align:center}
-  .kb-center{width:100%;padding:0}
-  .kf-wire{width:80px}
-  .htag{font-size:10px}
 }
 
-/* ── REDUCED MOTION ── */
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
   .hc>*{opacity:1;transform:none;animation:none}
@@ -142,9 +168,6 @@ footer .fn{color:var(--gdim)}
 </style>
 </head>
 <body>
-
-<a href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;focus:static" class="skip-link">Skip to main content</a>
-<style>.skip-link:focus{position:fixed;top:8px;left:8px;width:auto;height:auto;padding:8px 16px;background:var(--green);color:#080c10;font-weight:700;font-size:12px;border-radius:4px;z-index:999;overflow:visible}</style>
 
 <nav aria-label="Main navigation">
   <div class="ni">
@@ -156,9 +179,8 @@ footer .fn{color:var(--gdim)}
   </div>
 </nav>
 
-<main id="main-content">
+<main>
 
-<!-- HERO -->
 <section class="hero" id="hero">
   <div class="wrap">
     <div class="hc">
@@ -166,115 +188,146 @@ footer .fn{color:var(--gdim)}
       <h1>Visura<br><span class="acc">Chandula.</span></h1>
       <div class="role-line">// open to junior backend roles</div>
       <p class="hsub">
-        Learning backend engineering by <span class="hl">building real systems</span> — REST APIs, microservices, event-driven architecture, and cloud deployments.
+        Learning backend engineering by <span class="hl">building real systems</span> — REST APIs, microservices, event-driven architecture, and distributed systems.
       </p>
       <div class="cta">
         <a href="#projects" class="btn btn-p">View Projects</a>
-        <a href="https://github.com/visurachan" class="btn btn-g" target="_blank" aria-label="GitHub profile (opens in new tab)">GitHub ↗</a>
-        <a href="https://linkedin.com/in/visurachandula" class="btn btn-g" target="_blank" aria-label="LinkedIn profile (opens in new tab)">LinkedIn ↗</a>
+        <a href="https://github.com/visurachan" class="btn btn-g" target="_blank">GitHub ↗</a>
+        <a href="https://linkedin.com/in/visurachandula" class="btn btn-g" target="_blank">LinkedIn ↗</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="wrap">
     <div class="slabel">// PROJECTS</div>
     <h2 class="stitle">What I've Built.</h2>
 
-    <!-- ECOSYSTEM SECTION -->
-    <div class="slabel" style="margin-top:3rem">// FINTECH ECOSYSTEM</div>
-    <p style="font-size:13px;color:var(--muted);max-width:580px;line-height:1.8;margin-bottom:0">
-      Two microservices built as one system — connected via Apache Kafka. The banking API produces transaction events; the fraud service consumes and evaluates them in real time.
+    <div class="slabel" style="margin-top:3rem">// FINTECH MICROSERVICES ECOSYSTEM</div>
+    <p style="font-size:13px;color:var(--muted);max-width:600px;line-height:1.8;margin-bottom:0">
+      Three microservices built as one connected system. The banking API is protected by a standalone rate limiter via HTTP and produces transaction events consumed by a fraud detection service via Kafka.
     </p>
 
     <div class="eco-wrap reveal">
-      <div class="eco-header">
-        <div>
-          <div class="eco-title">Fintech Microservices Ecosystem</div>
-          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
-            <span class="pill g">Microservices</span>
-            <span class="pill a">Event-Driven</span>
-            <span class="pill a">Apache Kafka</span>
-            <span class="pill">Async Architecture</span>
-            <span class="pill g">Spring Boot</span>
-            <span class="pill">PostgreSQL</span>
-            <span class="pill b">Redis</span>
-            <span class="pill a">Docker</span>
+      <div class="eco-title">Fintech Microservices Ecosystem</div>
+      <div class="eco-subtitle">Three services — one connected system</div>
+      <div class="pills" style="margin-bottom:1.5rem">
+        <span class="pill g">Microservices</span>
+        <span class="pill t">Distributed Rate Limiting</span>
+        <span class="pill a">Event-Driven</span>
+        <span class="pill a">Apache Kafka</span>
+        <span class="pill b">Redis</span>
+        <span class="pill g">Spring Boot</span>
+        <span class="pill">PostgreSQL</span>
+        <span class="pill a">Docker</span>
+      </div>
+
+      <div class="hub-arch">
+        <div class="arch-label">// SERVICE COMMUNICATION</div>
+
+        <!-- Customer chip centered above banking core -->
+        <div class="entry">
+          <span class="cust-chip"><span class="cust-dot"></span>CUSTOMER REQUEST</span>
+          <div class="dw-line"><span class="dw-sig"></span></div>
+          <div class="dw-arrow">↓</div>
+        </div>
+
+        <!-- Three tiles with horizontal connectors -->
+        <div class="hub-row">
+
+          <div class="svc-box">
+            <div class="sb-tag">// PROTECTION LAYER</div>
+            <div class="sb-name">rate-limiter-service</div>
+            <div class="sb-port">:8082</div>
           </div>
+
+          <div class="hconn">
+            <div class="hc-label">HTTP sync</div>
+            <div class="hc-wire-wrap">
+              <div class="hc-wire hc-wire-g"><span class="hc-sig hc-sig-g"></span></div>
+              <div class="hc-arrow" style="color:var(--gdim)">↔</div>
+              <div class="hc-wire hc-wire-g"><span class="hc-sig hc-sig-g" style="animation-delay:.4s"></span></div>
+            </div>
+            <div class="hc-note">before each request</div>
+          </div>
+
+          <div class="svc-box core">
+            <div class="sb-tag">// CORE SERVICE</div>
+            <div class="sb-name">banking-core-api</div>
+            <div class="sb-port">:8080</div>
+          </div>
+
+          <div class="hconn">
+            <div class="hc-label">Kafka async</div>
+            <div class="hc-wire-wrap">
+              <div class="hc-wire hc-wire-a"><span class="hc-sig hc-sig-a" style="animation-delay:.5s"></span></div>
+              <div class="hc-arrow" style="color:var(--amber)">→</div>
+              <div class="hc-wire hc-wire-a"><span class="hc-sig hc-sig-a" style="animation-delay:.9s"></span></div>
+            </div>
+            <div class="hc-note">after transaction</div>
+          </div>
+
+          <div class="svc-box">
+            <div class="sb-tag">// ANALYSIS LAYER</div>
+            <div class="sb-name">fraud-detection-service</div>
+            <div class="sb-port">:8081</div>
+          </div>
+
         </div>
       </div>
 
-      <!-- Kafka band -->
-      <div class="kafka-band">
-        <div class="kb-left">
-          <strong>banking-core-api</strong><br>
-          publishes transaction events
-        </div>
-        <div class="kb-center">
-          <span class="kb-label">KAFKA</span>
-          <div class="kf-wire">
-            <span class="kf-signal"></span>
-          </div>
-        </div>
-        <div class="kb-right">
-          <strong>fraud-detection-service</strong><br>
-          consumes events
-        </div>
-      </div>
-
-      <!-- Two service cards -->
       <div class="eco-grid">
-        <a class="eco-card" href="https://github.com/visurachan/banking-core-api" target="_blank">
-          <div class="etag">// SERVICE 01 · EVENT PRODUCER</div>
-          <h4>banking-core-api</h4>
-          <p>Production-grade REST API implementing double-entry bookkeeping, idempotent transactions, optimistic locking, and Redis-backed balance caching. Publishes transaction events to Kafka on every completed operation.</p>
-          <div class="pills">
-            <span class="pill g">Java 21</span>
-            <span class="pill g">Spring Boot 3.5</span>
+        <a class="eco-card" href="https://github.com/visurachan/rate-limiter" target="_blank">
+          <div class="etag">// SERVICE 01 · PROTECTION</div>
+          <h4>rate-limiter-service</h4>
+          <p>Standalone distributed rate limiter. Token Bucket via atomic Redis Lua script. Resilience4j circuit breaker fails open on Redis outage. Java SDK for one-dependency integration.</p>
+          <div class="pills" style="margin-bottom:.75rem">
+            <span class="pill g">Spring Boot 3</span>
+            <span class="pill b">Redis Lua</span>
+            <span class="pill t">Resilience4j</span>
+            <span class="pill r">Grafana</span>
             <span class="pill">PostgreSQL</span>
-            <span class="pill b">Redis</span>
-            <span class="pill">Flyway</span>
-            <span class="pill">JWT</span>
-            <span class="pill a">Kafka</span>
-            <span class="pill a">Docker</span>
           </div>
-          <span class="clink">View README & Source</span>
+          <span class="ec-clink">View source</span>
         </a>
-
-        <a class="eco-card" href="https://github.com/visurachan/fraud-detection-service" target="_blank">
-          <div class="etag">// SERVICE 02 · EVENT CONSUMER</div>
-          <h4>fraud-detection-service</h4>
-          <p>Consumes transaction events from Kafka in real time. Evaluates each transaction against a Strategy-pattern rule engine (velocity, large amount, duplicate, off-hours). Persists full rule evaluation results per alert. Monitored with Prometheus and Grafana.</p>
-          <div class="pills">
+        <a class="eco-card" href="https://github.com/visurachan/banking-core-api" target="_blank">
+          <div class="etag">// SERVICE 02 · CORE</div>
+          <h4>banking-core-api</h4>
+          <p>Production-grade banking REST API. Double-entry ledger, idempotent transactions, optimistic locking, Redis-cached balances, and Kafka event production on every transaction.</p>
+          <div class="pills" style="margin-bottom:.75rem">
             <span class="pill g">Java 21</span>
-            <span class="pill g">Spring Boot 3.5</span>
-            <span class="pill a">Kafka</span>
-            <span class="pill">PostgreSQL</span>
             <span class="pill b">Redis</span>
-            <span class="pill">Flyway</span>
+            <span class="pill a">Kafka</span>
+            <span class="pill">JWT</span>
+            <span class="pill">PostgreSQL</span>
+          </div>
+          <span class="ec-clink">View source</span>
+        </a>
+        <a class="eco-card" href="https://github.com/visurachan/fraud-detection-service" target="_blank">
+          <div class="etag">// SERVICE 03 · ANALYSIS</div>
+          <h4>fraud-detection-service</h4>
+          <p>Real-time Kafka consumer evaluating transactions against a Strategy-pattern rule engine — velocity checks, large amounts, duplicate detection, off-hours activity.</p>
+          <div class="pills" style="margin-bottom:.75rem">
+            <span class="pill g">Java 21</span>
+            <span class="pill a">Kafka</span>
             <span class="pill r">Prometheus</span>
             <span class="pill r">Grafana</span>
-            <span class="pill a">Docker</span>
+            <span class="pill">PostgreSQL</span>
           </div>
-          <span class="clink">View README & Source</span>
+          <span class="ec-clink">View source</span>
         </a>
       </div>
-
     </div>
 
+    <div class="slabel" style="margin-top:3.5rem">// OTHER PROJECTS</div>
 
-
-    <!-- CAREERS (standalone) -->
-    <div class="reveal" style="margin-top:1.25rem">
+    <div class="reveal">
       <a class="proj-card" href="https://github.com/visurachan/careers-backend" target="_blank">
-        <div class="ptag">// PROJECT 03</div>
+        <div class="ptag">// PROJECT 04</div>
         <h3>careers-backend</h3>
-        <p>
-          A cloud-deployed backend built feature by feature while live — every capability grew from a failing integration test and was only shipped once all tests passed through a GitHub Actions pipeline. Covers JWT auth, role-based access for recruiters and candidates, CV uploads to AWS S3 with presigned URLs, and zero-downtime deploys on Render.
-        </p>
-        <div class="pills">
+        <p>A cloud-deployed backend built feature by feature while live — every capability grew from a failing integration test and was only shipped once all tests passed through a GitHub Actions pipeline. Covers JWT auth, role-based access for recruiters and candidates, CV uploads to AWS S3 with presigned URLs, and zero-downtime deploys on Render.</p>
+        <div class="pills" style="margin-top:1rem">
           <span class="pill g">Java 21</span>
           <span class="pill g">Spring Boot 3.4</span>
           <span class="pill">PostgreSQL</span>
@@ -286,19 +339,16 @@ footer .fn{color:var(--gdim)}
           <span class="pill">Render</span>
           <span class="pill">Swagger</span>
         </div>
-        <span class="clink">View README & Source</span>
+        <span class="clink">View README &amp; Source</span>
       </a>
     </div>
 
-    <!-- PERSONAL TRAINER (standalone) -->
-    <div class="reveal" style="margin-top:1.25rem">
+    <div class="reveal">
       <a class="proj-card" href="https://github.com/visurachan/FitWithJack-backend" target="_blank">
-        <div class="ptag">// PROJECT 04</div>
+        <div class="ptag">// PROJECT 05</div>
         <h3>FitWithJack-backend</h3>
-        <p>
-          REST API for a personal training platform where users book one-time sessions and regular classes — with automated SMTP email confirmations on successful bookings. Containerised with Docker and deployed to AWS EC2 as multi-container services, with an alternative setup on Elastic Beanstalk and RDS. Connected to a React frontend on Vercel for a fully cloud-deployed production architecture.
-        </p>
-        <div class="pills">
+        <p>REST API for a personal training platform where users book one-time sessions and regular classes — with automated SMTP email confirmations on successful bookings. Containerised with Docker and deployed to AWS EC2, with an alternative setup on Elastic Beanstalk and RDS. Connected to a React frontend on Vercel for a fully cloud-deployed production architecture.</p>
+        <div class="pills" style="margin-top:1rem">
           <span class="pill g">Spring Boot</span>
           <span class="pill g">Spring Security</span>
           <span class="pill a">Docker</span>
@@ -309,14 +359,13 @@ footer .fn{color:var(--gdim)}
           <span class="pill">React</span>
           <span class="pill">Vercel</span>
         </div>
-        <span class="clink">View README & Source</span>
+        <span class="clink">View README &amp; Source</span>
       </a>
     </div>
 
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="wrap">
     <div class="slabel">// CONTACT</div>
@@ -325,18 +374,18 @@ footer .fn{color:var(--gdim)}
       Open to junior backend roles. Reach out via any of the channels below.
     </p>
     <div class="contact-grid reveal">
-      <a class="cc" href="mailto:visurachandula@gmail.com" aria-label="Send email to visurachandula@gmail.com">
-        <span class="ci" aria-hidden="true">✉</span>
+      <a class="cc" href="mailto:visurachandula@gmail.com">
+        <span class="ci" style="font-size:16px">✉</span>
         <div class="ct">Email</div>
         <div class="cs">visurachandula@gmail.com</div>
       </a>
-      <a class="cc" href="https://github.com/visurachan" target="_blank" aria-label="GitHub profile (opens in new tab)">
-        <span class="ci" aria-hidden="true" style="font-family:monospace;font-size:15px">{ }</span>
+      <a class="cc" href="https://github.com/visurachan" target="_blank">
+        <span class="ci" style="font-family:monospace;font-size:14px;font-weight:700">{ }</span>
         <div class="ct">GitHub</div>
         <div class="cs">github.com/visurachan</div>
       </a>
-      <a class="cc" href="https://www.linkedin.com/in/visurachandula" target="_blank" aria-label="LinkedIn profile (opens in new tab)">
-        <span class="ci" aria-hidden="true" style="font-size:14px;font-weight:700">in</span>
+      <a class="cc" href="https://www.linkedin.com/in/visurachandula" target="_blank">
+        <span class="ci" style="font-size:13px;font-weight:700">in</span>
         <div class="ct">LinkedIn</div>
         <div class="cs">linkedin.com/in/visurachandula</div>
       </a>
