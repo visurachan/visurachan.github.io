@@ -115,7 +115,7 @@ section{padding:5.5rem 0}
 .hc-note{font-size:8px;color:var(--muted);white-space:nowrap;text-align:center}
 
 /* three cards */
-.eco-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.75rem}
+.eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
 .eco-card{display:block;text-decoration:none;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:1rem;transition:all .2s}
 .eco-card:hover{border-color:var(--border-h);background:rgba(0,255,140,0.03)}
 .etag{font-size:9px;letter-spacing:.1em;color:var(--gdim);margin-bottom:4px}
@@ -206,12 +206,12 @@ footer .fn{color:var(--gdim)}
 
     <div class="slabel" style="margin-top:3rem">// FINTECH MICROSERVICES ECOSYSTEM</div>
     <p style="font-size:13px;color:var(--muted);max-width:600px;line-height:1.8;margin-bottom:0">
-      Three microservices built as one connected system. The banking API is protected by a standalone rate limiter via HTTP and produces transaction events consumed by a fraud detection service via Kafka.
+      Four microservices built as one connected system. The banking API is protected by a standalone rate limiter via HTTP, produces transaction events consumed by a fraud detection service via Kafka, and offloads async work to a job queue worker.
     </p>
 
     <div class="eco-wrap reveal">
       <div class="eco-title">Fintech Microservices Ecosystem</div>
-      <div class="eco-subtitle">Three services — one connected system</div>
+      <div class="eco-subtitle">Four services — one connected system</div>
       <div class="pills" style="margin-bottom:1.5rem">
         <span class="pill g">Microservices</span>
         <span class="pill t">Distributed Rate Limiting</span>
@@ -275,6 +275,20 @@ footer .fn{color:var(--gdim)}
           </div>
 
         </div>
+
+        <!-- Vertical connector from banking-core to job-queue -->
+        <div class="entry" style="margin-top:.5rem">
+          <div class="dw-line" style="background:rgba(45,212,191,0.12)"><span class="dw-sig" style="background:linear-gradient(180deg,transparent,var(--teal),transparent)"></span></div>
+          <div style="font-size:8px;color:var(--muted);letter-spacing:.07em;margin:3px 0">HTTP · submit job</div>
+          <div class="dw-arrow" style="color:var(--teal)">↓</div>
+        </div>
+        <div style="display:flex;justify-content:center">
+          <div class="svc-box">
+            <div class="sb-tag">// ASYNC WORKER</div>
+            <div class="sb-name">job-queue-service</div>
+          </div>
+        </div>
+
       </div>
 
       <div class="eco-grid">
@@ -317,6 +331,18 @@ footer .fn{color:var(--gdim)}
           </div>
           <span class="ec-clink">View source</span>
         </a>
+        <a class="eco-card" href="https://github.com/visurachan/job-queue" target="_blank">
+          <div class="etag">// SERVICE 04 · ASYNC WORKER</div>
+          <h4>job-queue-service</h4>
+          <p>Database-backed async job processor with a polling worker, exponential-backoff retries, and dead-letter queue. Handles SEND_EMAIL, SEND_WEBHOOK, and GENERATE_PDF jobs. Ships with a Java SDK client for one-dependency integration.</p>
+          <div class="pills" style="margin-bottom:.75rem">
+            <span class="pill g">Spring Boot 3</span>
+            <span class="pill g">Java 21</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill t">SDK Client</span>
+          </div>
+          <span class="ec-clink">View source</span>
+        </a>
       </div>
     </div>
 
@@ -324,7 +350,7 @@ footer .fn{color:var(--gdim)}
 
     <div class="reveal">
       <a class="proj-card" href="https://github.com/visurachan/careers-backend" target="_blank">
-        <div class="ptag">// PROJECT 04</div>
+        <div class="ptag">// PROJECT 05</div>
         <h3>careers-backend</h3>
         <p>A cloud-deployed backend built feature by feature while live — every capability grew from a failing integration test and was only shipped once all tests passed through a GitHub Actions pipeline. Covers JWT auth, role-based access for recruiters and candidates, CV uploads to AWS S3 with presigned URLs, and zero-downtime deploys on Render.</p>
         <div class="pills" style="margin-top:1rem">
@@ -345,7 +371,7 @@ footer .fn{color:var(--gdim)}
 
     <div class="reveal">
       <a class="proj-card" href="https://github.com/visurachan/FitWithJack-backend" target="_blank">
-        <div class="ptag">// PROJECT 05</div>
+        <div class="ptag">// PROJECT 06</div>
         <h3>FitWithJack-backend</h3>
         <p>REST API for a personal training platform where users book one-time sessions and regular classes — with automated SMTP email confirmations on successful bookings. Containerised with Docker and deployed to AWS EC2, with an alternative setup on Elastic Beanstalk and RDS. Connected to a React frontend on Vercel for a fully cloud-deployed production architecture.</p>
         <div class="pills" style="margin-top:1rem">
