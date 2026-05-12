@@ -161,10 +161,10 @@ footer .fn{color:var(--gdim)}
 
   /* reorder hub tiles: core first, then protection, then analysis */
   .svc-box.core{order:1}
-  .conn-http{order:2}
-  .svc-rate{order:3}
-  .conn-kafka{order:4}
-  .svc-fraud{order:5}
+  .svc-rate{order:2}
+  .svc-fraud{order:3}
+  /* hide connectors — linear stack implies false relationships on mobile */
+  .hconn{display:none}
 }
 
 @media(prefers-reduced-motion:reduce){
