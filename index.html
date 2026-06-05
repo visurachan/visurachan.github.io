@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Visura Chandula — Backend Engineer</title>
+<title>Visura Chandula — Technology Graduate</title>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#080c10;--bg2:#0d1117;--bg3:#111820;
-  --border:rgba(0,255,140,0.12);--border-h:rgba(0,255,140,0.35);
-  --green:#00ff8c;--gdim:rgba(0,255,140,0.6);--gfaint:rgba(0,255,140,0.07);
-  --text:#e2e8f0;--muted:#64748b;--dim:#94a3b8;
-  --amber:#f59e0b;--blue:#38bdf8;--red:#f87171;--teal:#2dd4bf;
+  --bg:#ffffff;--bg2:#f1f5f9;--bg3:#e2e8f0;
+  --border:#cbd5e1;--border-h:#1e3a5f;
+  --green:#1e3a5f;--gdim:#1e3a5f;--gfaint:rgba(30,58,95,0.06);
+  --text:#0f172a;--muted:#64748b;--dim:#475569;
+  --amber:#d97706;--blue:#2563eb;--red:#dc2626;--teal:#0d9488;
   --mono:'JetBrains Mono',monospace;--sans:'Syne',sans-serif;
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--mono);min-height:100vh;overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,255,140,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,140,0.025) 1px,transparent 1px);background-size:44px 44px;pointer-events:none;z-index:0}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(30,58,95,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(30,58,95,0.04) 1px,transparent 1px);background-size:44px 44px;pointer-events:none;z-index:0}
 .wrap{max-width:1100px;margin:0 auto;padding:0 2rem;position:relative;z-index:1}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid var(--border);background:rgba(8,12,16,0.93);backdrop-filter:blur(14px)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid var(--border);background:rgba(255,255,255,0.95);backdrop-filter:blur(14px)}
 nav .ni{max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
 .logo{font-family:var(--sans);font-size:17px;font-weight:800;color:var(--green);text-decoration:none;letter-spacing:-0.5px}
 .logo span{color:var(--muted);font-weight:400;font-size:12px;margin-left:8px;font-family:var(--mono)}
@@ -36,17 +36,17 @@ nav .ni{max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;align-items:c
 .hc>*:nth-child(4){animation-delay:.55s}
 @keyframes fu{to{opacity:1;transform:none}}
 .htag{display:inline-flex;align-items:center;gap:8px;background:var(--gfaint);border:1px solid var(--border);border-radius:4px;padding:6px 14px;font-size:11px;color:var(--gdim);letter-spacing:.12em;margin-bottom:2rem}
-.htag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s infinite}
+.htag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 h1{font-family:var(--sans);font-size:clamp(42px,7vw,78px);font-weight:800;line-height:1.0;letter-spacing:-2px;margin-bottom:.6rem}
 h1 .acc{color:var(--green)}
-.role-line{display:inline-block;font-size:13px;color:var(--green);letter-spacing:.06em;margin-bottom:1.4rem;font-family:var(--sans);font-weight:700;background:rgba(0,255,140,0.07);border:1px solid rgba(0,255,140,0.25);border-radius:4px;padding:5px 14px}
+.role-line{display:inline-block;font-size:13px;color:var(--green);letter-spacing:.06em;margin-bottom:1.4rem;font-family:var(--mono);font-weight:500;background:rgba(30,58,95,0.06);border:1px solid rgba(30,58,95,0.2);border-radius:4px;padding:5px 14px}
 .hsub{font-size:14px;color:var(--dim);line-height:1.9;max-width:560px;margin-bottom:2rem}
 .hsub .hl{color:var(--gdim)}
 .cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.5rem}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;font-size:12px;font-family:var(--mono);text-decoration:none;border-radius:4px;transition:all .2s;cursor:pointer;border:none;letter-spacing:.03em}
-.btn-p{background:var(--green);color:#080c10;font-weight:700}
-.btn-p:hover{background:#00e07a;transform:translateY(-1px)}
+.btn-p{background:var(--green);color:#ffffff;font-weight:700}
+.btn-p:hover{background:#152d4a;transform:translateY(-1px)}
 .btn-g{background:transparent;color:var(--dim);border:1px solid var(--border)}
 .btn-g:hover{border-color:var(--border-h);color:var(--green)}
 
@@ -56,15 +56,15 @@ section{padding:5.5rem 0}
 .stitle{font-family:var(--sans);font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-1px;margin-bottom:1rem}
 
 .pills{display:flex;flex-wrap:wrap;gap:5px}
-.pill{font-size:10px;padding:3px 8px;border-radius:3px;border:1px solid rgba(255,255,255,0.08);color:var(--dim);background:rgba(255,255,255,0.04);letter-spacing:.05em}
-.pill.g{border-color:rgba(0,255,140,0.22);color:var(--gdim);background:rgba(0,255,140,0.05)}
-.pill.b{border-color:rgba(56,189,248,0.22);color:var(--blue);background:rgba(56,189,248,0.05)}
-.pill.a{border-color:rgba(245,158,11,0.22);color:var(--amber);background:rgba(245,158,11,0.05)}
-.pill.r{border-color:rgba(248,113,113,0.22);color:var(--red);background:rgba(248,113,113,0.05)}
-.pill.t{border-color:rgba(45,212,191,0.22);color:var(--teal);background:rgba(45,212,191,0.05)}
+.pill{font-size:10px;padding:3px 8px;border-radius:3px;border:1px solid rgba(0,0,0,0.1);color:var(--dim);background:rgba(0,0,0,0.04);letter-spacing:.05em}
+.pill.g{border-color:rgba(30,58,95,0.25);color:#1e3a5f;background:rgba(30,58,95,0.06)}
+.pill.b{border-color:rgba(37,99,235,0.25);color:#2563eb;background:rgba(37,99,235,0.06)}
+.pill.a{border-color:rgba(217,119,6,0.25);color:#d97706;background:rgba(217,119,6,0.06)}
+.pill.r{border-color:rgba(220,38,38,0.25);color:#dc2626;background:rgba(220,38,38,0.06)}
+.pill.t{border-color:rgba(13,148,136,0.25);color:#0d9488;background:rgba(13,148,136,0.06)}
 
 .proj-card{display:block;text-decoration:none;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1.75rem;transition:all .25s;margin-bottom:1.25rem}
-.proj-card:hover{border-color:var(--border-h);transform:translateY(-2px);background:rgba(0,255,140,0.03)}
+.proj-card:hover{border-color:var(--border-h);transform:translateY(-2px);background:rgba(30,58,95,0.03)}
 .ptag{font-size:10px;letter-spacing:.12em;color:var(--gdim);margin-bottom:.6rem}
 .proj-card h3{font-family:var(--sans);font-size:22px;font-weight:700;margin-bottom:.5rem}
 .proj-card p{font-size:12px;color:var(--muted);line-height:1.8}
@@ -83,7 +83,7 @@ section{padding:5.5rem 0}
 .entry{display:flex;flex-direction:column;align-items:center;margin-bottom:.25rem}
 .cust-chip{display:inline-flex;align-items:center;gap:7px;font-size:10px;color:var(--muted);letter-spacing:.08em;border:1px solid var(--border);border-radius:4px;padding:5px 12px;background:var(--bg2)}
 .cust-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;flex-shrink:0}
-.dw-line{width:1px;height:22px;background:rgba(0,255,140,0.15);position:relative;overflow:hidden;margin-top:3px}
+.dw-line{width:1px;height:22px;background:rgba(30,58,95,0.15);position:relative;overflow:hidden;margin-top:3px}
 .dw-sig{position:absolute;top:-100%;left:0;width:1px;height:100%;background:linear-gradient(180deg,transparent,var(--green),transparent);animation:fall .9s ease-in-out infinite}
 @keyframes fall{0%{top:-100%}100%{top:110%}}
 .dw-arrow{font-size:10px;color:var(--gdim);line-height:1;margin-bottom:4px}
@@ -94,8 +94,8 @@ section{padding:5.5rem 0}
 /* service tiles — no description, just tag, name, port */
 .svc-box{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:.9rem 1rem;text-align:center;transition:border-color .2s;flex:1;max-width:200px}
 .svc-box:hover{border-color:var(--border-h)}
-.svc-box.core{border-color:rgba(0,255,140,0.3);position:relative}
-.svc-box.core::before{content:'CORE';position:absolute;top:-8px;left:50%;transform:translateX(-50%);font-size:8px;letter-spacing:.14em;color:var(--green);background:var(--bg3);padding:0 6px;border:1px solid rgba(0,255,140,0.3);border-radius:2px}
+.svc-box.core{border-color:rgba(30,58,95,0.35);position:relative}
+.svc-box.core::before{content:'CORE';position:absolute;top:-8px;left:50%;transform:translateX(-50%);font-size:8px;letter-spacing:.14em;color:var(--green);background:var(--bg2);padding:0 6px;border:1px solid rgba(30,58,95,0.35);border-radius:2px}
 .sb-tag{font-size:8px;letter-spacing:.1em;color:var(--gdim);margin-bottom:5px}
 .sb-name{font-family:var(--sans);font-size:12px;font-weight:700;color:var(--text);margin-bottom:3px}
 .sb-port{font-size:9px;color:var(--muted)}
@@ -105,8 +105,8 @@ section{padding:5.5rem 0}
 .hc-label{font-size:8px;color:var(--muted);letter-spacing:.07em;white-space:nowrap;text-align:center}
 .hc-wire-wrap{display:flex;align-items:center;gap:4px;width:100%}
 .hc-wire{height:2px;flex:1;position:relative;border-radius:2px;overflow:hidden}
-.hc-wire-g{background:rgba(0,255,140,0.12)}
-.hc-wire-a{background:rgba(245,158,11,0.12)}
+.hc-wire-g{background:rgba(30,58,95,0.12)}
+.hc-wire-a{background:rgba(217,119,6,0.12)}
 .hc-sig{position:absolute;top:0;left:-50%;width:50%;height:2px;border-radius:2px;animation:hflow 1.6s ease-in-out infinite}
 .hc-sig-g{background:linear-gradient(90deg,transparent,var(--green),transparent)}
 .hc-sig-a{background:linear-gradient(90deg,transparent,var(--amber),transparent)}
@@ -117,7 +117,7 @@ section{padding:5.5rem 0}
 /* three cards */
 .eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
 .eco-card{display:block;text-decoration:none;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:1rem;transition:all .2s}
-.eco-card:hover{border-color:var(--border-h);background:rgba(0,255,140,0.03)}
+.eco-card:hover{border-color:var(--border-h);background:rgba(30,58,95,0.03)}
 .etag{font-size:9px;letter-spacing:.1em;color:var(--gdim);margin-bottom:4px}
 .eco-card h4{font-family:var(--sans);font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px}
 .eco-card p{font-size:10px;color:var(--muted);line-height:1.65;margin-bottom:.75rem}
@@ -136,6 +136,11 @@ footer .fn{color:var(--gdim)}
 
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:none}
+
+.ss-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1.25rem;align-items:start}
+.ss-item{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.ss-item img{width:100%;display:block}
+.ss-caption{font-size:9px;letter-spacing:.08em;color:var(--muted);padding:5px 10px;background:var(--bg3)}
 
 /* ── MOBILE ── */
 @media(max-width:680px){
@@ -178,9 +183,10 @@ footer .fn{color:var(--gdim)}
 
 <nav aria-label="Main navigation">
   <div class="ni">
-    <a class="logo" href="#hero">VC <span>// backend engineer</span></a>
+    <a class="logo" href="#hero">VC <span>// technology graduate</span></a>
     <ul class="nl">
       <li><a href="#projects">projects</a></li>
+      <li><a href="#products">products</a></li>
       <li><a href="#contact">contact</a></li>
     </ul>
   </div>
@@ -193,9 +199,9 @@ footer .fn{color:var(--gdim)}
     <div class="hc">
       <div class="htag">AVAILABLE FOR OPPORTUNITIES</div>
       <h1>Visura<br><span class="acc">Chandula.</span></h1>
-      <div class="role-line">// open to junior backend roles</div>
+      <div class="role-line">// seeking junior & graduate roles</div>
       <p class="hsub">
-        Learning backend engineering by <span class="hl">building real systems</span> — REST APIs, microservices, event-driven architecture, and distributed systems.
+        Learning by <span class="hl">building real systems</span> — REST APIs, microservices, event-driven architecture, and distributed systems. Interested in software engineering, business analysis, and any technology role where I can add value.
       </p>
       <div class="cta">
         <a href="#projects" class="btn btn-p">View Projects</a>
@@ -226,7 +232,7 @@ footer .fn{color:var(--gdim)}
         <span class="pill a">Apache Kafka</span>
         <span class="pill b">Redis</span>
         <span class="pill g">Spring Boot</span>
-        <span class="pill">PostgreSQL</span>
+        <span class="pill b">PostgreSQL</span>
         <span class="pill a">Docker</span>
       </div>
 
@@ -285,7 +291,7 @@ footer .fn{color:var(--gdim)}
 
         <!-- Vertical connector from banking-core to job-queue -->
         <div class="entry" style="margin-top:.5rem">
-          <div class="dw-line" style="background:rgba(45,212,191,0.12)"><span class="dw-sig" style="background:linear-gradient(180deg,transparent,var(--teal),transparent)"></span></div>
+          <div class="dw-line" style="background:rgba(13,148,136,0.12)"><span class="dw-sig" style="background:linear-gradient(180deg,transparent,var(--teal),transparent)"></span></div>
           <div style="font-size:8px;color:var(--muted);letter-spacing:.07em;margin:3px 0">HTTP · submit job</div>
           <div class="dw-arrow" style="color:var(--teal)">↓</div>
         </div>
@@ -308,7 +314,7 @@ footer .fn{color:var(--gdim)}
             <span class="pill b">Redis Lua</span>
             <span class="pill t">Resilience4j</span>
             <span class="pill r">Grafana</span>
-            <span class="pill">PostgreSQL</span>
+            <span class="pill b">PostgreSQL</span>
           </div>
           <span class="ec-clink">View source</span>
         </a>
@@ -320,8 +326,8 @@ footer .fn{color:var(--gdim)}
             <span class="pill g">Java 21</span>
             <span class="pill b">Redis</span>
             <span class="pill a">Kafka</span>
-            <span class="pill">JWT</span>
-            <span class="pill">PostgreSQL</span>
+            <span class="pill t">JWT</span>
+            <span class="pill b">PostgreSQL</span>
           </div>
           <span class="ec-clink">View source</span>
         </a>
@@ -334,7 +340,7 @@ footer .fn{color:var(--gdim)}
             <span class="pill a">Kafka</span>
             <span class="pill r">Prometheus</span>
             <span class="pill r">Grafana</span>
-            <span class="pill">PostgreSQL</span>
+            <span class="pill b">PostgreSQL</span>
           </div>
           <span class="ec-clink">View source</span>
         </a>
@@ -345,7 +351,7 @@ footer .fn{color:var(--gdim)}
           <div class="pills" style="margin-bottom:.75rem">
             <span class="pill g">Spring Boot 3</span>
             <span class="pill g">Java 21</span>
-            <span class="pill">PostgreSQL</span>
+            <span class="pill b">PostgreSQL</span>
             <span class="pill t">SDK Client</span>
           </div>
           <span class="ec-clink">View source</span>
@@ -363,14 +369,14 @@ footer .fn{color:var(--gdim)}
         <div class="pills" style="margin-top:1rem">
           <span class="pill g">Java 21</span>
           <span class="pill g">Spring Boot 3.4</span>
-          <span class="pill">PostgreSQL</span>
+          <span class="pill b">PostgreSQL</span>
           <span class="pill b">AWS RDS</span>
           <span class="pill b">AWS S3</span>
-          <span class="pill">JWT</span>
+          <span class="pill t">JWT</span>
           <span class="pill a">Docker</span>
           <span class="pill r">GitHub Actions</span>
-          <span class="pill">Render</span>
-          <span class="pill">Swagger</span>
+          <span class="pill b">Render</span>
+          <span class="pill t">Swagger</span>
         </div>
         <span class="clink">View README &amp; Source</span>
       </a>
@@ -388,12 +394,81 @@ footer .fn{color:var(--gdim)}
           <span class="pill b">AWS EC2</span>
           <span class="pill b">AWS RDS</span>
           <span class="pill b">Elastic Beanstalk</span>
-          <span class="pill">SMTP</span>
-          <span class="pill">React</span>
-          <span class="pill">Vercel</span>
+          <span class="pill a">SMTP</span>
+          <span class="pill b">React</span>
+          <span class="pill b">Vercel</span>
         </div>
         <span class="clink">View README &amp; Source</span>
       </a>
+    </div>
+
+  </div>
+</section>
+
+<section id="products">
+  <div class="wrap">
+    <div class="slabel">// PRODUCTS</div>
+    <h2 class="stitle">Beyond the Backend.</h2>
+    <p style="font-size:13px;color:var(--muted);max-width:600px;line-height:1.8;margin-bottom:0">
+      A complete full-stack system built for private bus operators in Sri Lanka — covering trip scheduling, crew assignment, fleet document tracking, fuel and cost logging, stock management, maintenance jobs, and financial reporting end to end.
+    </p>
+
+    <div class="eco-wrap reveal">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+        <div class="eco-title">RouteBus</div>
+        <span style="font-size:9px;letter-spacing:.12em;color:#ffffff;background:var(--green);border-radius:3px;padding:2px 8px;font-family:var(--mono)">PRODUCTION</span>
+      </div>
+      <div class="eco-subtitle">Bus Fleet & Operations Management System</div>
+      <div class="pills" style="margin-bottom:1.5rem">
+        <span class="pill g">Spring Boot</span>
+        <span class="pill g">Java</span>
+        <span class="pill b">React</span>
+        <span class="pill b">Vite</span>
+        <span class="pill b">PostgreSQL</span>
+      </div>
+
+      <div class="eco-grid">
+        <div class="eco-card" style="pointer-events:none">
+          <div class="etag">// SCHEDULING</div>
+          <h4>Trip & Crew Management</h4>
+          <p>Create trips from timetable for route services and private hires. Assign drivers and conductors in advance and update assignments on the fly when plans change.</p>
+        </div>
+        <div class="eco-card" style="pointer-events:none">
+          <div class="etag">// FLEET</div>
+          <h4>Document & Cost Tracking</h4>
+          <p>Dashboard alerts for upcoming document expiries — insurance, revenue licences. Log trip costs and fuel per journey to track day-to-day operational spend.</p>
+        </div>
+        <div class="eco-card" style="pointer-events:none">
+          <div class="etag">// MAINTENANCE</div>
+          <h4>Stock & Workshop</h4>
+          <p>Full stock management with in/out records. Maintenance jobs with parts assigned from stock, labour tracked, and total costs captured per job.</p>
+        </div>
+        <div class="eco-card" style="pointer-events:none">
+          <div class="etag">// REPORTING</div>
+          <h4>Revenue, Costs & Payroll</h4>
+          <p>Generate daily, weekly, and custom period reports for revenue, operating costs, and profit & loss. Commission-based payslip records for drivers and conductors.</p>
+        </div>
+      </div>
+
+      <div class="ss-grid">
+        <div class="ss-item">
+          <img src="bus_screenshots/routebus-dashboard.png" alt="RouteBus dashboard">
+          <div class="ss-caption">// DASHBOARD · fleet overview & document expiries</div>
+        </div>
+        <div class="ss-item">
+          <img src="bus_screenshots/routebus-trips.png" alt="RouteBus route trips">
+          <div class="ss-caption">// OPERATIONS · route trip management</div>
+        </div>
+        <div class="ss-item">
+          <img src="bus_screenshots/routebus-revenue.png" alt="RouteBus revenue report">
+          <div class="ss-caption">// REPORTS · weekly revenue by route & class</div>
+        </div>
+        <div class="ss-item">
+          <img src="bus_screenshots/routebus-payroll.png" alt="RouteBus payroll statement">
+          <div class="ss-caption">// PAYROLL · commission-based payslip</div>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -404,7 +479,7 @@ footer .fn{color:var(--gdim)}
     <div class="slabel">// CONTACT</div>
     <h2 class="stitle">Let's Talk.</h2>
     <p style="font-size:13px;color:var(--muted);max-width:500px;line-height:1.8">
-      Open to junior backend roles. Reach out via any of the channels below.
+      Open to Software Engineer, Business Analyst, and internship opportunities. Reach out via any of the channels below.
     </p>
     <div class="contact-grid reveal">
       <a class="cc" href="mailto:visurachandula@gmail.com">
@@ -430,7 +505,7 @@ footer .fn{color:var(--gdim)}
 
 <footer>
   <div class="wrap">
-    <span class="fn">Visura Chandula</span> · backend engineer · Newcastle, UK
+    <span class="fn">Visura Chandula</span> · technology graduate
   </div>
 </footer>
 
